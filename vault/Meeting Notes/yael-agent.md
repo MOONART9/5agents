@@ -12,6 +12,15 @@
 
 ## Session Log
 
+### 2026-05-13 — added image placeholder behavior [shipped]
+- **What was done:** עודכן `.claude/agents/yael.md` — נוסף שלב 3.5 ב-flow: זיהוי מקומות לתמונות והשתלת `{{IMAGE_NEEDED: "..."}}` placeholders. עודכן שלב 5 (דיווח) לכלול רשימה ממוספרת של placeholders. עודכן שלב 4 (HTML) להסביר איך placeholders משתקפים גם ב-HTML.
+- **Decisions:**
+  - **תקשורת אסינכרונית עם יובל**: יעל לא קוראת לו ישירות (אין לה Bash), במקום זה מחזירה לראובן רשימה. ראובן מתאם.
+  - **קצב תמונות**: 1 לכל 300–500 מילים, hero לכל מאמר מעל 500 מילים, מעל H2 שמכיל רעיון ויזואלי-בר-הצגה. לא כל H2.
+  - **prompt באנגלית בתוך placeholder עברי**: התיאור עצמו יכול להיות בעברית — יובל יתרגם לאנגלית לפני שליחת ה-API.
+- **Notes / Caveats:** עדיין לא נבדק על מאמר אמיתי — סבב הבדיקה הראשון יהיה כשהמשתמש יבקש מאמר חדש עם תמונות.
+- **Related:** [[yuval-agent]], [[gpt-image-gen-skill]], [[claude-md-reuven]]
+
 ### 2026-05-13 — initial creation [shipped]
 - **What was done:** נוצרו 5 קבצים: `.claude/agents/yael.md` (סוכן מלא עם 5-step flow), `yael/style-guide.md` (stub), `yael/reference/.gitkeep`, `Content/.gitkeep`, `Output/.gitkeep`. עודכן `CLAUDE.md` של ראובן עם trigger keywords דו-לשוניים, קבצים שייכים, ויכולות/אי-יכולות של יעל.
 - **Decisions:**

@@ -11,6 +11,12 @@
 
 ## Session Log
 
+### 2026-05-13 — added yael→yuval workflow + yuval agent block [shipped]
+- **What was done:** הוסף section "תהליכי עבודה" עם flow מלא של מאמר+תמונות (7 שלבים). הוחלף בלוק יובל מ"עתידי" ל"קיים" עם trigger keywords ושיוך קבצים. שודרג section "מבנה התיקיות" — הסבר על `.claude/`, תיקיות עבודה בשורש (`Content/`, `Output/`, `yael/`, `yuval/`, `vault/`).
+- **Decisions:** ה-workflow מתאר תהליך אסינכרוני: יעל מסמנת placeholders → ראובן מקבל רשימה → ראובן מפעיל את יובל פעם אחת לכל placeholder → ראובן משלב (כולל copy מ-`yuval/outputs/` ל-`Output/images/`). זה מבטיח self-contained Output ו-debug-ability.
+- **Notes / Caveats:** כשהמשתמש יבקש מאמר עם תמונות — צריך להריץ end-to-end test ולוודא שהשרשרת באמת עובדת. סשן הבא ייטען את הסוכנים החדשים אוטומטית.
+- **Related:** [[yael-agent]], [[yuval-agent]], [[gpt-image-gen-skill]]
+
 ### 2026-05-13 — initial creation [shipped]
 - **What was done:** נכתב הקובץ בעברית עם 5 חלקים: הצגה עצמית, תיאור פרויקט, רשימת צוות, מבנה תיקיות, הערת המשך.
 - **Decisions:** בוצע בגוף ראשון ("אני ראובן…") כדי לחזק את הפרסונה. בכוונה לא נוספו הוראות ניתוב — נשמר לסבב הבא.

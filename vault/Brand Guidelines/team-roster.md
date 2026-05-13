@@ -2,7 +2,7 @@
 
 ## Overview
 
-הצוות בפרויקט מורכב מ-4 דמויות AI עם תפקידים מובחנים. **ראובן** הוא המנכ"ל שמקבל בקשות מהמשתמש ומנתב; שלושת ה-sub-agents (יעל, יובל, חן) הם מומחי-תחום שראובן מפעיל לפי צורך. ראובן חי בקובץ `CLAUDE.md` בשורש. **יעל** קיימת תחת `.claude/agents/yael.md` עם תיקיית עבודה ב-`yael/`. **יובל** ו-**חן** עדיין לא נוצרו.
+הצוות בפרויקט מורכב מ-4 דמויות AI עם תפקידים מובחנים. **ראובן** הוא המנכ"ל שמקבל בקשות מהמשתמש ומנתב; שלושת ה-sub-agents (יעל, יובל, חן) הם מומחי-תחום שראובן מפעיל לפי צורך. ראובן חי בקובץ `CLAUDE.md` בשורש. **יעל** קיימת תחת `.claude/agents/yael.md` עם תיקיית עבודה ב-`yael/`. **יובל** קיים תחת `.claude/agents/yuval.md` עם תיקיית עבודה ב-`yuval/` וסקיל ייעודי `.claude/skills/gpt-image-gen/`. **חן** עדיין לא נוצרה.
 
 ## Open Questions
 
@@ -11,6 +11,12 @@
 - מה מודל המקור של כל sub-agent? (sonnet/opus/haiku — תלוי במשימה)
 
 ## Session Log
+
+### 2026-05-13 — yuval agent shipped + yael-yuval handoff defined [shipped]
+- **What was done:** יובל הוגדר ב-`.claude/agents/yuval.md` — סטטוס עבר מ"עתידי" ל"קיים". סקיל `gpt-image-gen` נוצר ([[gpt-image-gen-skill]]). יעל עודכנה לזהות מקומות לתמונות ולהשתיל `{{IMAGE_NEEDED}}` placeholders. ראובן עודכן עם שרשרת עבודה מלאה: יעל → רשימת placeholders → יובל לכל אחד → ראובן משלב ב-MD/HTML → גרסה סופית ב-`Output/`.
+- **Decisions:** הצוות בנוי **תקשורת אסינכרונית**: יעל לא קוראת ליובל ישירות (אין לה Bash), במקום זה מחזירה רשימה לראובן שמתאם. יתרון: הפרדה נקייה של אחריות, debugging קל יותר, אפשרות לראובן לעצור/לערוך לפני יצירת תמונות.
+- **Notes / Caveats:** רק חן נשארה. שני הסוכנים החדשים לא נטענים כ-sub-agents בסשן הזה (נוצרו עתה) — בסשן הבא הם זמינים דרך Agent tool.
+- **Related:** [[yuval-agent]], [[yael-agent]], [[gpt-image-gen-skill]], [[claude-md-reuven]]
 
 ### 2026-05-13 — yael agent shipped [shipped]
 - **What was done:** יעל הוגדרה בפועל ב-`.claude/agents/yael.md` — סטטוס שלה עבר מ"עתידי" ל"קיים". CLAUDE.md של ראובן עודכן בהתאם (trigger keywords, יודעת/לא יודעת).

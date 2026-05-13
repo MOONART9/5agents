@@ -6,7 +6,7 @@
 
 ## Open Questions
 
-- מתי יוגדרו 2 הסוכנים הנותרים? (יעל כבר קיימת; נשארו `.claude/agents/{yuval,chen}.md`)
+- מתי תוגדר חן? (יעל ויובל כבר קיימים; נשאר `.claude/agents/chen.md`)
 - האם להוסיף slash-commands ב-`.claude/commands/` (למשל `/brief`, `/research`, `/draft`)?
 - האם להגדיר hook ב-settings.json שיפעיל `obsidian-vault-workflow` אוטומטית בכל סשן?
 

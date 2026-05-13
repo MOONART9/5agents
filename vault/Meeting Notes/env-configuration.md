@@ -6,10 +6,17 @@
 
 ## Open Questions
 
-- אילו ספקים ספציפיים נשתמש בפועל? (Replicate vs DALL-E ליובל; Tavily vs Serper לחן)
-- האם להוסיף משתנים לסוכן מסוים שעוד לא קיים?
+- אילו ספקים ספציפיים לחן? (Tavily vs Serper vs Perplexity)
+- האם להסיר את `IMAGE_API_KEY` מ-`.env.example` עכשיו שיובל עובד עם OpenAI? (משאיר ב-`.env.example` כ-placeholder לחלופה עתידית)
+- האם להוסיף משתנים לסוכן חן שעוד לא קיים?
 
 ## Session Log
+
+### 2026-05-13 — OPENAI_API_KEY upgraded to mandatory [shipped]
+- **What was done:** ההערה ב-`.env.example` עבור `OPENAI_API_KEY` שונתה מ"אופציונלי" ל"חובה — יובל משתמש ב-gpt-image-2 ליצירת תמונות". `IMAGE_API_KEY` הושאר כ-placeholder לחלופה עתידית עם הערה שיובל עובד כרגע עם OpenAI.
+- **Decisions:** לא הסרתי את `IMAGE_API_KEY` כדי לא לשבור setups קיימים אם המשתמש כבר מילא ערך. שינוי הערה בלבד.
+- **Notes / Caveats:** `.env` עצמו לא הועלה (gitignored). המשתמש צריך להוסיף את ה-key בעצמו לפני שיובל יוכל לפעול.
+- **Related:** [[gpt-image-gen-skill]], [[yuval-agent]]
 
 ### 2026-05-13 — initial setup [shipped]
 - **What was done:** נוצרו `.env` ו-`.env.example` עם placeholders ל-4 מפתחות API + 2 משתנים כלליים. הוספה הגנה ב-`.gitignore`.
