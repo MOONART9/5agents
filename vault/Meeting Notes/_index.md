@@ -10,3 +10,4 @@
 - [[gitignore-config]] — `.gitignore` — הגנה על סודות וקבצי מערכת
 - [[superpowers-skills]] — 14 הסקילים שהותקנו ממאגר obra/superpowers
 - [[obsidian-skills]] — 3 סקילי Obsidian: vault-workflow, markdown, bases
+- [[skill-creator]] — הסקיל הרשמי של Anthropic ליצירה/עריכה/eval של סקילים
