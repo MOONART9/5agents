@@ -6,11 +6,18 @@
 
 ## Open Questions
 
-- מתי תוגדר חן? (יעל ויובל כבר קיימים; נשאר `.claude/agents/chen.md`)
+- האם להגדיר slash-commands ב-`.claude/commands/` (`/brief`, `/research`, `/draft`) כקיצורי-דרך לזרימות נפוצות?
+- האם להוסיף test end-to-end של flow מלא (חן → יעל → יובל)?
 - האם להוסיף slash-commands ב-`.claude/commands/` (למשל `/brief`, `/research`, `/draft`)?
 - האם להגדיר hook ב-settings.json שיפעיל `obsidian-vault-workflow` אוטומטית בכל סשן?
 
 ## Session Log
+
+### 2026-05-13 — chen agent shipped, team complete [shipped]
+- **What was done:** נוצרה חן ([[chen-agent]]) — sub-agent שלישי ואחרון. נוספה תיקייה `chen/Memory/`. עודכן [[claude-md-reuven]] עם flow מלא של 4 הסוכנים יחד.
+- **Decisions:** ה-Open Question ההיסטורי "מתי יוגדרו הסוכנים" — נסגר סופית. ה-Open Questions החדשים שמשתחררים: slash commands ו-end-to-end testing.
+- **Notes / Caveats:** עץ הסוכנים יציב. השלב הבא הוא לבדוק שהשרשרת באמת רצה — דורש סשן חדש לטעון את כל הסוכנים כ-Agent calls אמיתיים.
+- **Related:** [[chen-agent]], [[team-roster]], [[claude-md-reuven]]
 
 ### 2026-05-13 — yael agent + working dirs added [shipped]
 - **What was done:** נוצרה הסוכנת הראשונה ([[yael-agent]]); נוספו תיקיות עבודה חדשות בשורש: `yael/`, `Content/`, `Output/`. עודכן `CLAUDE.md` של ראובן.

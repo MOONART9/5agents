@@ -2,7 +2,7 @@
 
 ## Overview
 
-הצוות בפרויקט מורכב מ-4 דמויות AI עם תפקידים מובחנים. **ראובן** הוא המנכ"ל שמקבל בקשות מהמשתמש ומנתב; שלושת ה-sub-agents (יעל, יובל, חן) הם מומחי-תחום שראובן מפעיל לפי צורך. ראובן חי בקובץ `CLAUDE.md` בשורש. **יעל** קיימת תחת `.claude/agents/yael.md` עם תיקיית עבודה ב-`yael/`. **יובל** קיים תחת `.claude/agents/yuval.md` עם תיקיית עבודה ב-`yuval/` וסקיל ייעודי `.claude/skills/gpt-image-gen/`. **חן** עדיין לא נוצרה.
+הצוות בפרויקט מורכב מ-4 דמויות AI עם תפקידים מובחנים. **ראובן** הוא המנכ"ל שמקבל בקשות מהמשתמש ומנתב; שלושת ה-sub-agents (יעל, יובל, חן) הם מומחי-תחום שראובן מפעיל לפי צורך. ראובן חי ב-`CLAUDE.md` בשורש. כל שלושת ה-sub-agents קיימים: **יעל** ב-`.claude/agents/yael.md` (+ `yael/`), **יובל** ב-`.claude/agents/yuval.md` (+ `yuval/` + סקיל `gpt-image-gen`), **חן** ב-`.claude/agents/chen.md` (+ `chen/Memory/searches.md`). הצוות שלם.
 
 ## Open Questions
 
@@ -11,6 +11,12 @@
 - מה מודל המקור של כל sub-agent? (sonnet/opus/haiku — תלוי במשימה)
 
 ## Session Log
+
+### 2026-05-13 — chen agent shipped — team is complete [shipped]
+- **What was done:** חן הוגדרה ב-`.claude/agents/chen.md` עם זיכרון חיפושים ב-`chen/Memory/searches.md`. CLAUDE.md של ראובן עודכן עם בלוק חן מלא + section תהליך-עבודה "מחקר → תוכן → תמונות" שמתאר את ה-flow של ארבעת הסוכנים יחד.
+- **Decisions:** חן מחזיקה **זיכרון מתמשך** (`chen/Memory/searches.md`) — הראשון בצוות. הסיבה: חיפושים חוזרים על אותו נושא הם בזבוז (קרדיט API + זמן). הזיכרון נבדק לפני כל חיפוש. סף "טריות": 30 יום ל-evergreen, פחות (או בכלל לא) ל-dynamic.
+- **Notes / Caveats:** הצוות שלם — שלישיית sub-agents + ראובן. **כל ה-Open Questions של 'מתי תוגדר X' סגורים.**
+- **Related:** [[chen-agent]], [[yael-agent]], [[yuval-agent]], [[claude-md-reuven]]
 
 ### 2026-05-13 — yuval agent shipped + yael-yuval handoff defined [shipped]
 - **What was done:** יובל הוגדר ב-`.claude/agents/yuval.md` — סטטוס עבר מ"עתידי" ל"קיים". סקיל `gpt-image-gen` נוצר ([[gpt-image-gen-skill]]). יעל עודכנה לזהות מקומות לתמונות ולהשתיל `{{IMAGE_NEEDED}}` placeholders. ראובן עודכן עם שרשרת עבודה מלאה: יעל → רשימת placeholders → יובל לכל אחד → ראובן משלב ב-MD/HTML → גרסה סופית ב-`Output/`.

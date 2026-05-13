@@ -14,3 +14,4 @@
 - [[yael-agent]] — יעל, כותבת התוכן (sub-agent ראשון שהוגדר)
 - [[yuval-agent]] — יובל, מעצב התמונות (sub-agent שני; משלים את יעל ב-flow מאמר+תמונות)
 - [[gpt-image-gen-skill]] — סקיל מעטפת ל-OpenAI Images API (מודל `gpt-image-2`); הסקיל שיובל קורא לו
+- [[chen-agent]] — חן, חוקרת הרשת (sub-agent שלישי; סוגרת את הצוות) — מכינה מקור ל-Content/ ליעל

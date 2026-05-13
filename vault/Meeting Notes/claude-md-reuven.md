@@ -11,6 +11,12 @@
 
 ## Session Log
 
+### 2026-05-13 — added chen block + full chen→yael→yuval workflow [shipped]
+- **What was done:** הוסף בלוק חן (מ"עתידי" ל"קיים") עם trigger keywords ושיוך קבצים. הוסף section "מחקר → תוכן → תמונות" שמתאר את ה-flow המלא של 4 הסוכנים: חן מביאה מקור → ראובן מחליט אם להמשיך → יעל כותבת + placeholders → יובל יוצר תמונות → ראובן משלב. הוסף `chen/` לעץ התיקיות.
+- **Decisions:** ראובן הוא **התאמן היחיד**. אף sub-agent לא קורא ישירות לאחר — הכל עובר דרכי. יתרון: שליטה, debug, ויכולת לעצור באמצע.
+- **Notes / Caveats:** ה-flow המלא טרם נבדק end-to-end (חן → יעל → יובל). הסבב הבא — סשן חדש עם בקשה אמיתית מהמשתמש.
+- **Related:** [[chen-agent]], [[yael-agent]], [[yuval-agent]]
+
 ### 2026-05-13 — added yael→yuval workflow + yuval agent block [shipped]
 - **What was done:** הוסף section "תהליכי עבודה" עם flow מלא של מאמר+תמונות (7 שלבים). הוחלף בלוק יובל מ"עתידי" ל"קיים" עם trigger keywords ושיוך קבצים. שודרג section "מבנה התיקיות" — הסבר על `.claude/`, תיקיות עבודה בשורש (`Content/`, `Output/`, `yael/`, `yuval/`, `vault/`).
 - **Decisions:** ה-workflow מתאר תהליך אסינכרוני: יעל מסמנת placeholders → ראובן מקבל רשימה → ראובן מפעיל את יובל פעם אחת לכל placeholder → ראובן משלב (כולל copy מ-`yuval/outputs/` ל-`Output/images/`). זה מבטיח self-contained Output ו-debug-ability.
