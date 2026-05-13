@@ -6,11 +6,17 @@
 
 ## Open Questions
 
-- מתי יוגדרו 3 הסוכנים בפועל (`.claude/agents/{yael,yuval,chen}.md`)?
+- מתי יוגדרו 2 הסוכנים הנותרים? (יעל כבר קיימת; נשארו `.claude/agents/{yuval,chen}.md`)
 - האם להוסיף slash-commands ב-`.claude/commands/` (למשל `/brief`, `/research`, `/draft`)?
 - האם להגדיר hook ב-settings.json שיפעיל `obsidian-vault-workflow` אוטומטית בכל סשן?
 
 ## Session Log
+
+### 2026-05-13 — yael agent + working dirs added [shipped]
+- **What was done:** נוצרה הסוכנת הראשונה ([[yael-agent]]); נוספו תיקיות עבודה חדשות בשורש: `yael/`, `Content/`, `Output/`. עודכן `CLAUDE.md` של ראובן.
+- **Decisions:** תיקיות עבודה (`Content/`, `Output/`, `yael/`) שמורות בשורש הפרויקט ולא תחת `.claude/` — כי הן data של המשתמש, לא קונפיג של Claude Code.
+- **Notes / Caveats:** `.gitkeep` נוסף ל-`Content/`, `Output/`, ו-`yael/reference/` כדי לשמר את המבנה ב-Git.
+- **Related:** [[yael-agent]], [[team-roster]], [[claude-md-reuven]]
 
 ### 2026-05-13 — vault initialization [shipped]
 - **What was done:** מופה כל הפרויקט; נוצרו קבצי תיעוד תחת `vault/Meeting Notes/` ו-`vault/Brand Guidelines/`; נוצרו `_index.md` בשני התיקיות.

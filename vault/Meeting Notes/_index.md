@@ -11,3 +11,4 @@
 - [[superpowers-skills]] — 14 הסקילים שהותקנו ממאגר obra/superpowers
 - [[obsidian-skills]] — 3 סקילי Obsidian: vault-workflow, markdown, bases
 - [[skill-creator]] — הסקיל הרשמי של Anthropic ליצירה/עריכה/eval של סקילים
+- [[yael-agent]] — יעל, כותבת התוכן (sub-agent ראשון שהוגדר)
